@@ -8,7 +8,7 @@ module Noncommittal
       ActiveRecord::Base.connection.select_values(
         "select table_name from information_schema.tables where table_schema = 'public' and table_type = 'BASE TABLE' and table_catalog = $1",
         "SQL",
-        [ActiveRecord::Relation::QueryAttribute.new("table_name", ActiveRecord::Base.connection.current_database, ActiveRecord::Type::String.new)]
+        [ActiveRecord::Relation::QueryAttribute.new("catalog_name", ActiveRecord::Base.connection.current_database, ActiveRecord::Type::String.new)]
       ) - ["ar_internal_metadata", "schema_migrations"]
     end
     tables = tables.map(&:to_s) - exclude_tables.map(&:to_s)
