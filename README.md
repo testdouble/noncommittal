@@ -17,7 +17,7 @@ Then, in your `test_helper.rb` (or similar), after you require your Rails
 environment, just drop this in:
 
 ```ruby
-Noncommittal.start!(tables: [:users, :posts])
+Noncommittal.start!
 ```
 
 This will create an empty table called `noncommittal_no_rows_allowed` and, for
