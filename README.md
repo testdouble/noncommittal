@@ -21,8 +21,9 @@ Noncommittal.start!(tables: [:users, :posts])
 ```
 
 This will create an empty table called `noncommittal_no_rows_allowed` and, for
-each of your models, a deferred foreign key constraint that will effectively
-prevent any records from being committed outside the test transaction.
+every table in your database, a deferred foreign key constraint that will
+effectively prevent any records from being committed outside the test
+transaction.
 
 ## Do you have commitment issues?
 
@@ -71,6 +72,13 @@ like so:
 
 ```ruby
 Noncommittal.start!(tables: [:users, :posts])
+```
+
+If you simply want to exclude certain tables, you can set the `exclude_tables`
+keyword argument:
+
+```ruby
+Noncommittal.start!(exclude_tables: [:system_configurations])
 ```
 
 ## Limitations
