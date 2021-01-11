@@ -81,6 +81,12 @@ keyword argument:
 Noncommittal.start!(exclude_tables: [:system_configurations])
 ```
 
+## What if I want to stop disallowing committed inserts?
+
+Just call `Noncommittal.stop!`, which takes the same arguments as `start!` for
+specifying tables and exclusions, and will simply remove all the constraints
+and the reference table.
+
 ## Limitations
 
 This only works with Postgres currently. PRs welcome if you can accomplish the
