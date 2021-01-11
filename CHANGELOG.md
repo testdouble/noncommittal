@@ -1,3 +1,7 @@
+## 0.2.0
+
+* Added `stop!` (#1)
+
 ## 0.1.1
 
 * Locks down all tables by querying postgres as opposed to looking for
