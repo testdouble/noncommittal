@@ -42,7 +42,7 @@ test](https://github.com/testdouble/contributing-tests/wiki/Subject) contains
 transaction logic itself, or creates its own database connections, or spawns
 child processes, then it's entirely possible that some of your tests will
 erroneously commit records to the database, potentially causing [test
-pollution](https://github.com/testdouble/test-smells/tree/master/smells/unreliable/litter-bugs).
+pollution](https://github.com/testdouble/test-smells/tree/main/smells/unreliable/litter-bugs).
 
 Over the years, Rubyists have taken several approaches to mitigate this risk,
 but most popular solutions have drawbacks:
